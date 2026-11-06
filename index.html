@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REM.DAW Support</title>
+<meta name="description" content="Help, contact and privacy policy for REM.DAW, the music production app for iPad.">
+<style>
+  :root {
+    --bg: #f6f6f7; --card: #ffffff; --text: #1d1d1f; --dim: #5f6168; --line: #e3e3e6;
+    --accent: #2f7fd0; --accent-soft: #e8f1fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141416; --card: #1e1e21; --text: #f2f2f4; --dim: #a2a4ab; --line: #2e2e33;
+            --accent: #61adeb; --accent-soft: #1b2a3a; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+  header { padding: 48px 0 24px; }
+  .app { display: flex; align-items: center; gap: 14px; }
+  .mark { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, #2f7fd0, #5ad1c8);
+          display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 18px; letter-spacing: .5px; flex: none; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0; }
+  .sub { color: var(--dim); margin: 2px 0 0; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  nav a { padding: 7px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line);
+          color: var(--text); text-decoration: none; font-size: 14px; }
+  nav a:hover { border-color: var(--accent); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 8px; margin-top: 18px; }
+  h2 { font-size: 21px; margin: 0 0 12px; }
+  h3 { font-size: 16px; margin: 20px 0 6px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--dim); font-size: 14px; }
+  a { color: var(--accent); }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: var(--accent-soft);
+             border-radius: 12px; padding: 14px 16px; margin: 6px 0 16px; }
+  .contact a.button { background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+                      padding: 9px 16px; border-radius: 10px; }
+  .email { font-weight: 600; word-break: break-all; }
+  details { border-top: 1px solid var(--line); padding: 12px 0; }
+  details:first-of-type { border-top: 0; }
+  summary { cursor: pointer; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "+"; display: inline-block; width: 1.2em; color: var(--accent); font-weight: 700; }
+  details[open] summary::before { content: "−"; }
+  details p, details ul { margin: 8px 0 4px 1.2em; }
+  ul { padding-left: 1.2em; }
+  .path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; background: var(--bg);
+          border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+  .pill { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); background: var(--accent-soft);
+          border-radius: 999px; padding: 3px 10px; margin-bottom: 8px; }
+  footer { margin-top: 28px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="app">
+    <div class="mark" aria-hidden="true">REM</div>
+    <div>
+      <h1>REM.DAW Support</h1>
+      <p class="sub">Music production for iPad: recording, MIDI, plug-ins and a clip launcher.</p>
+    </div>
+  </div>
+  <nav aria-label="On this page">
+    <a href="#contact">Contact</a>
+    <a href="#faq">Questions</a>
+    <a href="#bugs">Report a problem</a>
+    <a href="#privacy">Privacy policy</a>
+  </nav>
+</header>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Questions, problems or ideas are all welcome. Email is the quickest way to reach the developer.</p>
+  <div class="contact">
+    <a class="button" href="mailto:paakobinabartels@gmail.com?subject=REM.DAW%20support">Email support</a>
+    <span class="email">paakobinabartels@gmail.com</span>
+  </div>
+  <p class="muted">Replies usually come within a few days.</p>
+</section>
+
+<section id="faq">
+  <h2>Common questions</h2>
+
+  <details>
+    <summary>How do I connect an audio interface?</summary>
+    <p>Plug a class-compliant USB audio interface into your iPad, directly or through a powered hub, then open REM.DAW. It uses the interface for recording and playback straight away.</p>
+    <p>The sample rate follows the interface by default. To ask for a different rate (44.1 to 192 kHz), open <span class="path">Settings › Audio › Sample Rate</span>. iPadOS doesn't let apps see which rates an interface supports, so if it can't run the rate you choose, REM.DAW stays at the current rate and tells you.</p>
+  </details>
+
+  <details>
+    <summary>My recording is too quiet. The fader is all the way up.</summary>
+    <p>The fader sets how loud you hear a track, not how loud it records. Raise the level before recording in <span class="path">Settings › Recording › Input</span>: watch the input meter and use <strong>Input Gain</strong> (and <strong>Device Input Level</strong>, when your interface offers it) until loud passages peak around −12 to −6 dB.</p>
+    <p>For a take that's already recorded, open it in the audio editor and choose <strong>Normalize</strong> from the GAIN menu. It changes the clip's gain, never the file.</p>
+  </details>
+
+  <details>
+    <summary>I hear crackles, or there's a delay when I play.</summary>
+    <p>Change the buffer size from the audio status button in the top bar or in <span class="path">Settings › Audio</span>. A larger buffer is safer against crackles, and a smaller one has less delay. 512 samples is a good starting point; drop to 128 or 256 when playing live. Turning on <strong>Efficient Plug-in Processing</strong> also helps with heavy plug-ins.</p>
+  </details>
+
+  <details>
+    <summary>How do I hear myself while recording?</summary>
+    <p>Tap the <strong>I</strong> button on an audio track (in the track header or at the bottom of its mixer strip) to hear its input through its effects. With <span class="path">Settings › Recording › Monitor When Armed</span> on, arming a track also turns monitoring on. Tap I to switch it off at any time, which is useful to avoid feedback when using the iPad's microphone near speakers.</p>
+  </details>
+
+  <details>
+    <summary>How do I connect a MIDI keyboard or controller?</summary>
+    <ul>
+      <li><strong>USB:</strong> plug it in. It's ready immediately.</li>
+      <li><strong>Bluetooth:</strong> <span class="path">Settings › MIDI › MIDI Devices › Bluetooth MIDI Devices…</span></li>
+      <li><strong>Wi-Fi from a Mac:</strong> turn on the Network Session in the same menu, then connect from Audio MIDI Setup on the Mac.</li>
+    </ul>
+    <p>Mackie Control and HUI control surfaces are set up under <span class="path">Settings › MIDI › Control Surface</span>.</p>
+  </details>
+
+  <details>
+    <summary>Where are my projects saved? How do I back them up?</summary>
+    <p>Projects are saved on your iPad, in REM.DAW's folder in the Files app (<span class="path">On My iPad › REM.DAW</span>). You can also keep projects somewhere else, such as a USB drive, iCloud Drive or another app's storage, by adding a location from the project browser.</p>
+    <p>To back up, copy the project's folder somewhere safe in the Files app. The folder contains the project and all of its audio.</p>
+  </details>
+
+  <details>
+    <summary>Can I use my AUv3 plug-ins?</summary>
+    <p>Yes. AUv3 instruments, effects and MIDI effects installed on your iPad appear in the plug-in menus and the browser. If a plug-in misbehaves, try turning off <span class="path">Settings › Audio › Multi-Core Plug-in Effects</span>.</p>
+  </details>
+
+  <details>
+    <summary>How do the clip launcher Modes work?</summary>
+    <p>Each clip's Mode decides how it responds when you tap it, and when it starts and stops. Grid Modes (Ableton Style, Launchpad Style, Retrigger, On Release, Legato, Contiguous) land on the next bar. Instant Modes (Hold, One Shot, Pick Up) act at once. Set the Mode for the whole project with the MODES button, or for one clip from its ••• menu.</p>
+  </details>
+
+  <details>
+    <summary>My band recorded without a click. Can the bars follow the recording?</summary>
+    <p>Yes. Touch and hold the audio clip and choose <strong>Map Tempo to This Recording</strong>. The song's tempo track then follows the playing, so bars, quantizing and MIDI line up with it. Nothing moves in time, and you can undo it.</p>
+  </details>
+
+  <details>
+    <summary>How do I change the app's colours?</summary>
+    <p>Choose a theme in <span class="path">Settings › Display › Theme</span>. It takes effect the next time you open REM.DAW: close it completely from the app switcher and open it again.</p>
+  </details>
+</section>
+
+<section id="bugs">
+  <h2>Report a problem</h2>
+  <p>Please <a href="mailto:paakobinabartels@gmail.com?subject=REM.DAW%20problem%20report">email</a> what happened and include:</p>
+  <ul>
+    <li>Your iPad model and iPadOS version</li>
+    <li>The REM.DAW version (<span class="path">Settings › About</span>)</li>
+    <li>The steps that lead to the problem, and what you expected to happen</li>
+    <li>Any audio interface, MIDI device or plug-in involved</li>
+    <li>A screenshot or screen recording, if you can</li>
+  </ul>
+  <p class="muted">If a project won't open, you can attach its folder (zipped in the Files app) so the problem can be reproduced.</p>
+</section>
+
+<section id="privacy">
+  <span class="pill">Effective 6 November 2026</span>
+  <h2>Privacy policy</h2>
+  <p><strong>In short: REM.DAW does not collect, store or share any personal data.</strong> Everything you make stays on your iPad, or wherever you choose to save it.</p>
+
+  <h3>What the app does not do</h3>
+  <ul>
+    <li>No accounts or sign-in.</li>
+    <li>No analytics, advertising, tracking or third-party data services.</li>
+    <li>Your projects, recordings and settings are never sent to the developer or anyone else.</li>
+  </ul>
+
+  <h3>Microphone</h3>
+  <p>REM.DAW asks for microphone access so it can record audio onto tracks and let you hear your input. The microphone (or your audio interface) is used only while you record, monitor or capture a sample. Recordings are saved as files in your project and never leave your device unless you share or export them yourself.</p>
+
+  <h3>Local network and Bluetooth</h3>
+  <p>The local network is used only for Wi-Fi MIDI, when you turn on a network session so a Mac or another device can play REM.DAW. Bluetooth is used only to connect to MIDI keyboards and controllers. In both cases MIDI travels directly between your own devices, not through any server.</p>
+
+  <h3>Your files</h3>
+  <p>Projects, audio, kits and presets are stored on your iPad. If you choose to keep them in iCloud Drive or another storage provider through the Files app, that provider's own terms and privacy policy apply. The developer has no access to your files.</p>
+
+  <h3>Third-party plug-ins</h3>
+  <p>AUv3 plug-ins you load are separate apps made by other developers, with their own privacy policies. REM.DAW doesn't share your data with them. A plug-in only receives the audio and MIDI you route through it.</p>
+
+  <h3>Children</h3>
+  <p>REM.DAW collects no data from anyone, including children.</p>
+
+  <h3>Changes</h3>
+  <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+  <h3>Contact</h3>
+  <p>Questions about privacy: <a href="mailto:paakobinabartels@gmail.com?subject=REM.DAW%20privacy">paakobinabartels@gmail.com</a></p>
+</section>
+
+<footer>
+  <p class="muted">REM.DAW for iPad</p>
+</footer>
+
+</div>
+</body>
+</html>
